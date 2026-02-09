@@ -6,6 +6,7 @@
 
     Try changing "table" to "view" below
 */
+{{ config(schema="bronze_layer") }}
 
 {{ config(materialized='table') }}
 
