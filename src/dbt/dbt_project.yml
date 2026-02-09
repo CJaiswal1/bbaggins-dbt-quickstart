@@ -38,5 +38,13 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   my_new_project:
     # Applies to all files under models/example/
-    example:
-      +materialized: table
+    api_int:
+      bronze:
+        +schema: iops_bronze_sbx
+        +materialized: incremental
+        +tags: ["bronze"]
+
+      gold:
+        +schema: iops_gold_sbx
+        +materialized: incremental
+        +tags: ["gold"]
