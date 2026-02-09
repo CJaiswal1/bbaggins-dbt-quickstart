@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: iops_raw_sbx
+    description: "Sandbox raw dataset for incremental testing."
+    database: "{{ target.database }}"
+    schema: iops_raw_sbx
+    tables:
+      - name: raw_api_metrics
